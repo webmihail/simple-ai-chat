@@ -1,6 +1,6 @@
 export const postStream = async (
   url: string,
-  data: any,
+  data: unknown,
   settings: RequestInit = {},
 ) => {
   const response = await fetch(`${import.meta.env.VITE_APP_API_URL}${url}`, {

@@ -1,12 +1,12 @@
 import { FC } from "react";
 
 import MessageItem from "modules/chat/components/MessageItem";
-import useStreamMessages from "modules/chat/hooks/useStreamMessages.ts";
+import { useChatStore } from "modules/chat/store";
 
 import styles from "./chatHistoryWindow.module.scss";
 
 const ChatHistoryWindow: FC = () => {
-  const { messages } = useStreamMessages();
+  const { messages } = useChatStore();
 
   return (
     <div className={styles.container}>

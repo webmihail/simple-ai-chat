@@ -1,12 +1,18 @@
 import { FC, FormEvent } from "react";
+import { v4 as uuidv4 } from "uuid";
+
 import SendBtnIcon from "assets/svg/arrow.svg?react";
+import StopChatIcon from "assets/svg/stop.svg?react";
 import { useChatStore } from "modules/chat/store";
 import { Role } from "modules/chat/enums";
-import { v4 as uuidv4 } from "uuid";
+import { IChatMessageFieldProps } from "modules/chat/interfaces";
 
 import styles from "./chatMessagesField.module.scss";
 
-const ChatMassagesField: FC = () => {
+const ChatMassagesField: FC<IChatMessageFieldProps> = ({
+  isProcess,
+  handleStopStream,
+}) => {
   const { addMessage } = useChatStore();
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -34,9 +40,15 @@ const ChatMassagesField: FC = () => {
         className={styles.textField}
         placeholder="Type your message.."
       ></input>
-      <button type="submit" className={styles.btn}>
-        <SendBtnIcon className={styles.sendBtnIcon} />
-      </button>
+      {isProcess ? (
+        <button onClick={handleStopStream} className={styles.btn}>
+          <StopChatIcon className={styles.btnIcon} />
+        </button>
+      ) : (
+        <button type="submit" className={styles.btn}>
+          <SendBtnIcon className={styles.btnIcon} />
+        </button>
+      )}
     </form>
   );
 };
