@@ -1,0 +1,21 @@
+@use "modules/common/globalStyles/media";
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media.size(medium) {
+    max-width: 1200px;
+    max-height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+  }
+}

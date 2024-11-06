@@ -1,0 +1,35 @@
+.messageUserContainer, .messageAssistantContainer {
+  display: flex;
+  margin: 10px 0;
+  max-width: 88%;
+
+  & svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.messageUserContainer {
+  align-self: flex-end;
+}
+
+.messageAssistantContainer {
+  align-self: flex-start;
+}
+
+.messageItemUser, .messageItemAssistant {
+  width: fit-content;
+  margin: 0 10px;
+  padding: 5px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.messageItemUser {
+  background-color: var(--gray-light);
+}
+
+.messageItemAssistant {
+  width: 100%;
+  background-color: var(--dark);
+}

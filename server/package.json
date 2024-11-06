@@ -1,0 +1,27 @@
+{
+  "name": "simple-ai-chat-server",
+  "version": "1.0.0",
+  "description": "Simple AI Chat API",
+  "main": "main.ts",
+  "author": "Mykhailo Donskyi",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --debug -r tsconfig-paths/register src/main.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "openai": "^4.71.0",
+    "prettier": "^3.3.3",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.8.4",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  }
+}
