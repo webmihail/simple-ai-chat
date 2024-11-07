@@ -3,6 +3,12 @@
 ## Overview
 Simple AI Chat is a chat based on GPT model (gpt-3.5-turbo)
 
+## Features
+- Send a message and get answer from AI
+- Aborting answering process (stream)
+- Chat history
+
+## Versions
 - YARN version 1.22.19
 - React version 18.3.1
 - NODE version v20.16.0
